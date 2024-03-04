@@ -7,7 +7,7 @@ Feature: Library login feature
 
   Background: For all scenarios user is on the login page of the library application
 
-    # Given step: Preconditions for the scenario
+    # Given step: Preconditions for all scenarios
     Given user is on the login page of the application
 
   @librarian @smoke
