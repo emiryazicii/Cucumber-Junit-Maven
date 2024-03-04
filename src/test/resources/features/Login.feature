@@ -26,3 +26,14 @@ Feature: Library login feature
 
     # Then step: Expected outcome of the scenario
     Then user should see the dashboard
+
+  Scenario: Login as admin
+    # Given step: Preconditions for the scenario
+    Given user is on the login page of the application
+
+    # When steps: Actions performed by the user
+    When user enters admin username
+    And user enters admin password
+
+    # Then step: Expected outcome of the scenario
+    Then user should see the dashboard
