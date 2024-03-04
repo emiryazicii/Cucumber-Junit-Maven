@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class) // Indicates that this class should be run with JUnit
 @CucumberOptions(
         // Add any desired plugins for reporting here
-        plugin = "",
+        plugin = "html:target/cucumber-reports.html",
         // Specifies the location of feature files
         features = "src/test/resources/features",
         // Specifies the package where step definitions are located
