@@ -1,3 +1,4 @@
+@regression
 Feature: Library login feature
 
   User Story:
