@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         glue = "com/emir/step_definitions",
         // Whether to execute a dry run of the feature files
         dryRun = false,
-        tags = "@regression"
+        tags = "@student"
 )
 public class CukesRunner {
 }
