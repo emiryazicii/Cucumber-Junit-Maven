@@ -5,5 +5,6 @@ Feature: Google search functionality
 Scenario: Search page default title verification
   # When steps: Actions performed by the user
   When user is on the Google search page
+
   # Then step: Expected outcome of the scenario
   Then user should see title is Google
