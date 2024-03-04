@@ -1,6 +1,7 @@
 package com.emir.step_definitions;
 
 import com.emir.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -46,5 +47,23 @@ public class Library_StepDefinitions {
         System.out.println("User should see the dashboard.");
         // Close the driver instance
         Driver.closeDriver();
+    }
+
+    /**
+     * Step definition for entering student username.
+     */
+    @When("user enters student username")
+    public void userEntersStudentUsername() {
+        // Print message indicating that the user enters the student username
+        System.out.println("User enters student username.");
+    }
+
+    /**
+     * Step definition for entering student password.
+     */
+    @And("user enters student password")
+    public void userEntersStudentPassword() {
+        // Print message indicating that the user enters the student password
+        System.out.println("User enters student password.");
     }
 }
