@@ -16,7 +16,7 @@ import org.junit.runner.RunWith;
         // Whether to execute a dry run of the feature files
         dryRun = false,
         // Specifies the tags to include/exclude specific scenarios or features
-        tags = "@librarian and @smoke"
+        tags = "@smoke and not @student"
 )
 public class CukesRunner {
 }
