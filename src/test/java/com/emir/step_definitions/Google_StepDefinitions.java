@@ -31,5 +31,8 @@ public class Google_StepDefinitions {
 
         // Assert the title
         Assert.assertEquals(actualTitle, expectedTitle);
+
+        // Close the driver after verification
+        Driver.closeDriver();
     }
 }
