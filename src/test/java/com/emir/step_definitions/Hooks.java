@@ -22,4 +22,8 @@ public class Hooks {
         System.out.println("----->@BeforeStep: RUNNING BEFORE EACH STEP");
     }
 
+    @AfterStep
+    public void tearDownStep(){
+        System.out.println("------>@AfterStep: RUNNING AFTER EACH STEP");
+    }
 }
