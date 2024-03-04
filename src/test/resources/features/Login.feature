@@ -29,7 +29,7 @@ Feature: Library login feature
     # Then step: Expected outcome of the scenario
     Then user should see the dashboard
 
-  @admin
+  @admin @smoke
   Scenario: Login as admin
     # Given step: Preconditions for the scenario
     Given user is on the login page of the application
