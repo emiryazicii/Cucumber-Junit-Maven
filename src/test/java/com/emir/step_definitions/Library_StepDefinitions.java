@@ -66,4 +66,17 @@ public class Library_StepDefinitions {
         // Print message indicating that the user enters the student password
         System.out.println("User enters student password.");
     }
+
+    @When("user enters admin username")
+    public void userEntersAdminUsername() {
+        // Print message indicating that the user enters the admin username
+        System.out.println("User enters admin username.");
+    }
+
+    @And("user enters admin password")
+    public void userEntersAdminPassword() {
+
+        // Print message indicating that the user enters the admin password
+        System.out.println("User enters admin password.");
+    }
 }
