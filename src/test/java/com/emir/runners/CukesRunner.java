@@ -15,6 +15,7 @@ import org.junit.runner.RunWith;
         glue = "com/emir/step_definitions",
         // Whether to execute a dry run of the feature files
         dryRun = false,
+        // Specifies the tags to include/exclude specific scenarios or features
         tags = "@smoke"
 )
 public class CukesRunner {
