@@ -1,5 +1,6 @@
 package com.emir.step_definitions;
 
+import com.emir.pages.WikiResultPage;
 import com.emir.pages.WikiSearchPage;
 import com.emir.utilities.BrowserUtils;
 import com.emir.utilities.Driver;
@@ -15,6 +16,9 @@ public class Wiki_StepDefinitions {
 
     // Initializing WikiSearchPage object
     WikiSearchPage wikiSearchPage = new WikiSearchPage();
+
+    // Initializing WikiResultPage object
+    WikiResultPage wikiResultPage = new WikiResultPage();
 
     /**
      * Step definition for navigating to the Wikipedia home page.
@@ -54,5 +58,16 @@ public class Wiki_StepDefinitions {
     public void user_sees_steve_jobs_is_in_the_wiki_title(String expectedTitle) {
         // Verifying if the expected term is present in the title of the search results page
         Assert.assertTrue(BrowserUtils.verifyTitleContains(expectedTitle));
+    }
+
+    /**
+     * Step definition for verifying if the expected term is present in the main header of the Wikipedia search results page.
+     *
+     * @param expectedHeaderPart The expected term to verify in the main header.
+     */
+    @Then("User sees {string} is in the main header")
+    public void userSeesSteveJobsIsInTheMainHeader(String expectedHeaderPart) {
+        // Verifying if the expected term is present in the main header of the search results page
+        Assert.assertTrue(wikiResultPage.mainHeader.getText().contains(expectedHeaderPart));
     }
 }
