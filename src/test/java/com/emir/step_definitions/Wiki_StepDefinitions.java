@@ -70,4 +70,15 @@ public class Wiki_StepDefinitions {
         // Verifying if the expected term is present in the main header of the search results page
         Assert.assertTrue(wikiResultPage.mainHeader.getText().contains(expectedHeaderPart));
     }
+
+    /**
+     * Step definition for verifying if the expected text is present in the image header of the Wikipedia search results page.
+     *
+     * @param expectedText The expected text to verify in the image header.
+     */
+    @Then("user sees {string} is in the image header")
+    public void user_sees_is_in_the_image_header(String expectedText) {
+        // Verifying if the expected text is present in the image header
+        Assert.assertEquals(wikiResultPage.imageHeader.getText(), expectedText);
+    }
 }
