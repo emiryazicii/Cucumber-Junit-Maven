@@ -1,6 +1,7 @@
 package com.emir.step_definitions;
 
 import com.emir.pages.DropdownsPage;
+import com.emir.utilities.BrowserUtils;
 import com.emir.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -74,20 +75,11 @@ public class DataTables_StepDefinitions {
      */
     @Then("User should see below info in month dropdown")
     public void user_should_see_below_info_in_month_dropdown(List<String> expectedMonths) {
-        // Creating a Select object for the month dropdown
-        Select month = new Select(dropdownsPage.monthDropdown);
-
-        // Getting the list of actual months as WebElements
-        List<WebElement> actualMonth_as_WebElement = month.getOptions();
-
-        // Converting the list of actual months from WebElements to Strings
-        List<String> actualMonth_as_String = new ArrayList<>();
-        for (WebElement eachElement : actualMonth_as_WebElement) {
-            actualMonth_as_String.add(eachElement.getText());
-        }
+        // Retrieving the actual months from the month dropdown
+        List<String> actualMonths = BrowserUtils.dropdownOptions_as_String(dropdownsPage.monthDropdown);
 
         // Verifying if the actual months match the expected months
-        Assert.assertEquals(actualMonth_as_String, expectedMonths);
+        Assert.assertEquals(expectedMonths, actualMonths);
     }
 
 }
