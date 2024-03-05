@@ -1,7 +1,14 @@
 package com.emir.step_definitions;
 
+import com.emir.pages.DropdownsPage;
+import com.emir.utilities.Driver;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -46,6 +53,41 @@ public class DataTables_StepDefinitions {
         System.out.println("driverInfo.get(\"name\") = " + driverInfo.get("name"));
         System.out.println("driverInfo.get(\"zipcode\") = " + driverInfo.get("zipcode"));
         System.out.println("driverInfo.get(\"state\") = " + driverInfo.get("state"));
+    }
+
+    // Initializing DropdownsPage object
+    DropdownsPage dropdownsPage = new DropdownsPage();
+
+    /**
+     * Step definition for navigating to the dropdowns page of the practice tool.
+     */
+    @Given("user is on the dropdowns page of practice tool")
+    public void user_is_on_the_dropdowns_page_of_practice_tool() {
+        // Navigate to the dropdowns page of the practice tool
+        Driver.getDriver().get("https://practice.cydeo.com/dropdown");
+    }
+
+    /**
+     * Step definition for verifying the expected months in the month dropdown.
+     *
+     * @param expectedMonths The list of expected months.
+     */
+    @Then("User should see below info in month dropdown")
+    public void user_should_see_below_info_in_month_dropdown(List<String> expectedMonths) {
+        // Creating a Select object for the month dropdown
+        Select month = new Select(dropdownsPage.monthDropdown);
+
+        // Getting the list of actual months as WebElements
+        List<WebElement> actualMonth_as_WebElement = month.getOptions();
+
+        // Converting the list of actual months from WebElements to Strings
+        List<String> actualMonth_as_String = new ArrayList<>();
+        for (WebElement eachElement : actualMonth_as_WebElement) {
+            actualMonth_as_String.add(eachElement.getText());
+        }
+
+        // Verifying if the actual months match the expected months
+        Assert.assertEquals(actualMonth_as_String, expectedMonths);
     }
 
 }
