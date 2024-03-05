@@ -29,11 +29,17 @@ Feature: Wiki search features
     Then User sees "<expectedMainHeader>" is in the main header
     Then user sees "<expectedImageHeader>" is in the image header
 
+    @ceos
     Examples: Search values we are going to be using in this scenario outlines
       | searchValue     | expectedTitle   | expectedMainHeader | expectedImageHeader |
       | Steve Jobs      | Steve Jobs      | Steve Jobs         | Steve Jobs          |
       | Marry Barra     | Marry Barra     | Marry Barra        | Marry Barra         |
       | Rosalind Brewer | Rosalind Brewer | Rosalind Brewer    | Rosalind Brewer     |
       | Sundar Pichai   | Sundar Pichai   | Sundar Pichai      | Sundar Pichai       |
-      | Marie Curie     | Marie Curie     | Marie Curie        | Marie Curie         |
-      | Albert Einstein | Albert Einstein | Albert Einstein    | Albert Einstein     |
+
+    @scientist
+    Examples:
+      | Marie Curie     | Marie Curie     | Marie Curie     | Marie Curie     |
+      | Albert Einstein | Albert Einstein | Albert Einstein | Albert Einstein |
+
+
