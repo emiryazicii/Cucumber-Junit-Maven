@@ -1,3 +1,4 @@
+@wiki
 Feature: Wiki search features
   Description: This feature describes the functionality related to searching on Wikipedia.
 
