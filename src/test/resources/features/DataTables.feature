@@ -25,3 +25,15 @@ Feature: Cucumber Data Tables implementation practices
       | wolf   |
       | eagle  |
     # This step verifies that the user should see the provided list of animals.
+
+  Scenario: Officer reads data about driver
+    # Then step: Expected outcome of the scenario
+    Then officer is able to see any data he wants
+      | name    | Jane       |
+      | surname | Doe        |
+      | age     | 32         |
+      | address | somewhere  |
+      | state   | AZ         |
+      | zipcode | 222222     |
+      | phone   | 1234567898 |
+   #Verifying that the officer can see the provided data about the driver.
