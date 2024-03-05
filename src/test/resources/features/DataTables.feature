@@ -1,7 +1,7 @@
 Feature: Cucumber Data Tables implementation practices
   Description: This feature describes practices for implementing Cucumber Data Tables.
 
-  @dataTable
+  #@dataTable
   Scenario: List of fruits and vegetables I like
     # Then step: Expected outcome of the scenario
     Then user should see below list
@@ -38,6 +38,7 @@ Feature: Cucumber Data Tables implementation practices
       | phone   | 1234567898 |
    #Verifying that the officer can see the provided data about the driver.
 
+  @dataTable
   Scenario: User should be able to see all 12 months in months dropdown
     # Given step: Preconditions for the scenario
     Given user is on the dropdowns page of practice tool
