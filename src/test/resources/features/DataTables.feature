@@ -13,3 +13,15 @@ Feature: Cucumber Data Tables implementation practices
       | pear       |
       | eggplant   |
     # This step verifies that the user should see the provided list of fruits and vegetables.
+
+  Scenario: List of the animals we love
+    # Then step: Expected outcome of the scenario
+    Then user should see below list of animals
+      | dog    |
+      | cat    |
+      | fox    |
+      | racoon |
+      | cow    |
+      | wolf   |
+      | eagle  |
+    # This step verifies that the user should see the provided list of animals.
