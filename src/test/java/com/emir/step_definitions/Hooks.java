@@ -1,5 +1,6 @@
 package com.emir.step_definitions;
 
+import com.emir.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
@@ -24,6 +25,8 @@ public class Hooks {
     @After
     public void tearDown(){
         System.out.println("---> @After: RUNNING AFTER EACH SCENARIO");
+        // Close the driver
+        Driver.closeDriver();
     }
 
     /**
