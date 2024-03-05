@@ -1,14 +1,36 @@
 package com.emir.step_definitions;
 
+import com.emir.pages.GoogleSearchPage;
+import com.emir.utilities.BrowserUtils;
 import com.emir.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 /**
  * Step definitions class for Google search feature.
  */
 public class Google_StepDefinitions {
+
+    // Initializing GoogleSearchPage object
+    GoogleSearchPage googleSearchPage = new GoogleSearchPage();
+
+    /**
+     * Step definition for searching for "apple".
+     */
+    @When("user searches for {word}")
+    public void userSearchesForApple(String word) {
+        googleSearchPage.searchBox.sendKeys(word + Keys.ENTER);
+    }
+
+    /**
+     * Step definition for verifying if the title contains "apple".
+     */
+    @Then("user should see {word} in the title")
+    public void userShouldSeeAppleInTheTitle(String word) {
+        Assert.assertTrue(BrowserUtils.verifyTitle(word+" - Google Search"));
+    }
 
     /**
      * Step definition for navigating to the Google search page.
@@ -35,4 +57,5 @@ public class Google_StepDefinitions {
         // Close the driver after verification
         Driver.closeDriver();
     }
+
 }

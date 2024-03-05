@@ -5,10 +5,13 @@ Feature: Library login feature
   As a user, I should be able to login with correct credentials to different accounts. And dashboard should be displayed.
   Accounts are: librarian, student, admin
 
+  Background: For all scenarios user is on the login page of the library application
+
+    # Given step: Preconditions for all scenarios
+    Given user is on the login page of the application
+
   @librarian @smoke
   Scenario: Login as librarian
-    # Given step: Preconditions for the scenario
-    Given user is on the login page of the application
 
     # When steps: Actions performed by the user
     When user enters librarian username
@@ -19,8 +22,6 @@ Feature: Library login feature
 
   @student @smoke
   Scenario: Login as student
-    # Given step: Preconditions for the scenario
-    Given user is on the login page of the application
 
     # When steps: Actions performed by the user
     When user enters student username
@@ -31,8 +32,6 @@ Feature: Library login feature
 
   @admin @smoke
   Scenario: Login as admin
-    # Given step: Preconditions for the scenario
-    Given user is on the login page of the application
 
     # When steps: Actions performed by the user
     When user enters admin username
