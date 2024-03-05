@@ -17,6 +17,7 @@ Feature: Bing search functionality
     Then user should see orange in title
     # This step verifies that the title of the search results page contains the term "orange".
 
+  @wip_emir
   Scenario: Search result title verification
     # Given steps: Preconditions for the scenario
     Given user is on the Bing search page
