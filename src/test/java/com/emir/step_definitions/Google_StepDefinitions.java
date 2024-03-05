@@ -19,17 +19,17 @@ public class Google_StepDefinitions {
     /**
      * Step definition for searching for "apple".
      */
-    @When("user searches for apple")
-    public void userSearchesForApple() {
-        googleSearchPage.searchBox.sendKeys("apple" + Keys.ENTER);
+    @When("user searches for {word}")
+    public void userSearchesForApple(String word) {
+        googleSearchPage.searchBox.sendKeys(word + Keys.ENTER);
     }
 
     /**
      * Step definition for verifying if the title contains "apple".
      */
-    @Then("user should see apple in the title")
-    public void userShouldSeeAppleInTheTitle() {
-        Assert.assertTrue(BrowserUtils.verifyTitle("apple - Google Search"));
+    @Then("user should see {word} in the title")
+    public void userShouldSeeAppleInTheTitle(String word) {
+        Assert.assertTrue(BrowserUtils.verifyTitle(word+" - Google Search"));
     }
 
     /**
