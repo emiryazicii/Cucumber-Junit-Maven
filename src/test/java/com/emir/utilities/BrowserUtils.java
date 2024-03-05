@@ -1,7 +1,11 @@
 package com.emir.utilities;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -73,27 +77,26 @@ public class BrowserUtils {
         }
     }
 
-}
-/*
- Create utility method
-1. Create a new class called BrowserUtils
-2. Create a method to make Task1 logic re-usable
-3. When method is called, it should switch window and verify title.
-Method info:
-• Name: switchWindowAndVerify
-• Return type: void
-• Arg1: String expectedInUrl
-• Arg2: String expectedTitle
- */
+    /**
+     * Method to retrieve the options of a dropdown element as strings.
+     *
+     * @param dropdownElement The dropdown element.
+     * @return The list of dropdown options as strings.
+     */
+    public static List<String> dropdownOptions_as_String(WebElement dropdownElement) {
+        // Creating a Select object for the dropdown element
+        Select dropdown = new Select(dropdownElement);
 
-/*
-Create utility method
-1. Create a new method for title verification
-2. Create a method to make title verification logic re-usable
-3. When method is called, it should simply verify expected title with actual
-title
-Method info:
-• Name: verifyTitle()
-• Return type: void
-• Arg: String expectedTitle
- */
+        // Getting the list of actual options as WebElements
+        List<WebElement> actualOptions_as_WebElement = dropdown.getOptions();
+
+        // Converting the list of actual options from WebElements to strings
+        List<String> actualOptions_as_String = new ArrayList<>();
+        for (WebElement option : actualOptions_as_WebElement) {
+            actualOptions_as_String.add(option.getText());
+        }
+
+        return actualOptions_as_String;
+    }
+
+}
