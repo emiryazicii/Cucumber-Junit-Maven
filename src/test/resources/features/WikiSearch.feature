@@ -37,7 +37,7 @@ Feature: Wiki search features
       | Rosalind Brewer | Rosalind Brewer | Rosalind Brewer    | Rosalind Brewer     |
       | Sundar Pichai   | Sundar Pichai   | Sundar Pichai      | Sundar Pichai       |
 
-    @scientist
+    @scientists
     Examples:
       | Marie Curie     | Marie Curie     | Marie Curie     | Marie Curie     |
       | Albert Einstein | Albert Einstein | Albert Einstein | Albert Einstein |
