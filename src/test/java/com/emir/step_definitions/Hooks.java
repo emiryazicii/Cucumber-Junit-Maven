@@ -25,10 +25,15 @@ public class Hooks {
      */
     @After
     public void tearDown(Scenario scenario) {
-        // Take screenshot of the current state of the browser
-        byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
-        // Attach the screenshot to the scenario report
-        scenario.attach(screenshot, "image/png", scenario.getName());
+
+        if(scenario.isFailed()){
+
+            // Take screenshot of the current state of the browser
+            byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
+            // Attach the screenshot to the scenario report
+            scenario.attach(screenshot, "image/png", scenario.getName());
+
+        }
 
         System.out.println("---> @After: RUNNING AFTER EACH SCENARIO");
 
