@@ -39,7 +39,8 @@ Feature: Wiki search features
 
     @scientists
     Examples:
-      | Marie Curie     | Marie Curie     | Marie Curie     | Marie Curie     |
-      | Albert Einstein | Albert Einstein | Albert Einstein | Albert Einstein |
+      | searchValue     | expectedTitle   | expectedMainHeader | expectedImageHeader |
+      | Marie Curie     | Marie Curie     | Marie Curie        | Marie Curie         |
+      | Albert Einstein | Albert Einstein | Albert Einstein    | Albert Einstein     |
 
 
