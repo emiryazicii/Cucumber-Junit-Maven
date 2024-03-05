@@ -20,6 +20,7 @@ Feature: Wiki search features
     When user clicks wiki search button
     Then user sees "Steve Jobs" is in the image header
 
+    @scenarioOutline
   Scenario Outline: Wikipedia Search Functionality with Scenario Outline
     Given user is on Wikipedia home page
     When user types "<searchValue>" in the wiki search box
