@@ -28,5 +28,5 @@ Feature: Bing search functionality
     # This step describes the action of the user searching for the term "orange" in the Bing search box.
 
     # Then steps: Expected outcome of the scenario
-    Then user should see "orange" in title
+    Then user should see "orange - Search" in title
     # This step verifies that the title of the search results page contains the term "orange".
