@@ -9,7 +9,7 @@ Feature: Google search functionality
   # Then step: Expected outcome of the scenario
     Then user should see title is Google
 
-    @wip_emir
+    #@wip_emir
   Scenario: Search result title verification
     # Given steps: Preconditions for the scenario
     Given user is on the Google search page
