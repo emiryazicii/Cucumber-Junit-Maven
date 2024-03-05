@@ -12,7 +12,7 @@ public class DropdownsPage {
 
     // Web element representing the month dropdown
     @FindBy(id = "month")
-    WebElement monthDropdown;
+    public WebElement monthDropdown;
 
     /**
      * Constructor to initialize the page elements using PageFactory.
