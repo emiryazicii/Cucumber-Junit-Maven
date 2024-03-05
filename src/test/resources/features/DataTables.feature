@@ -37,3 +37,23 @@ Feature: Cucumber Data Tables implementation practices
       | zipcode | 222222     |
       | phone   | 1234567898 |
    #Verifying that the officer can see the provided data about the driver.
+
+  Scenario: User should be able to see all 12 months in months dropdown
+    # Given step: Preconditions for the scenario
+    Given user is on the dropdowns page of practice tool
+    # Then step: Expected outcome of the scenario
+    Then User should see below info in month dropdown
+      | January   |
+      | February  |
+      | March     |
+      | April     |
+      | May       |
+      | June      |
+      | July      |
+      | August    |
+      | September |
+      | October   |
+      | November  |
+      | December  |
+    # This step verifies that the user should be able to see all 12 months in the month dropdown.
+
