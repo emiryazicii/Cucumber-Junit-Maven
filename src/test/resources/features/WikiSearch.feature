@@ -42,3 +42,4 @@ Feature: Wiki search features
     When user clicks wiki search button
     # This step describes the action of the user clicking the Wikipedia search button.
     Then user sees "Steve Jobs" is in the image header
+    # This step verifies that the term "Steve Jobs" is present in the image header of the Wikipedia search results page.
