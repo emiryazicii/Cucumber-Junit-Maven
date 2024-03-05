@@ -13,7 +13,7 @@ public class Hooks {
     /**
      * Method to execute before each scenario.
      */
-    @Before
+    //@Before
     public void setupMethod(){
         System.out.println("--->@Before: RUNNING BEFORE EACH SCENARIO");
     }
@@ -21,7 +21,7 @@ public class Hooks {
     /**
      * Method to execute after each scenario.
      */
-    @After
+    //@After
     public void tearDown(){
         System.out.println("---> @After: RUNNING AFTER EACH SCENARIO");
     }
@@ -29,7 +29,7 @@ public class Hooks {
     /**
      * Method to execute before each step within a scenario.
      */
-    @BeforeStep
+   // @BeforeStep
     public void setupStep(){
         System.out.println("----->@BeforeStep: RUNNING BEFORE EACH STEP");
     }
@@ -37,7 +37,7 @@ public class Hooks {
     /**
      * Method to execute after each step within a scenario.
      */
-    @AfterStep
+   // @AfterStep
     public void tearDownStep(){
         System.out.println("------>@AfterStep: RUNNING AFTER EACH STEP");
     }
