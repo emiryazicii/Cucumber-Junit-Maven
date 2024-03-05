@@ -3,6 +3,7 @@ Feature: Bing search functionality
   Agile story: As a user , when I'm on the Bing search page
   I should be able to search anything and see relevant results.
 
+  @wip_emir
   Scenario: Search result title verification
     # Given steps: Preconditions for the scenario
     Given user is on the Bing search page
