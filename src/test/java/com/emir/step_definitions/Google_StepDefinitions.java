@@ -29,7 +29,7 @@ public class Google_StepDefinitions {
      */
     @Then("user should see apple in the title")
     public void userShouldSeeAppleInTheTitle() {
-        Assert.assertTrue(BrowserUtils.verifyTitle("apple"));
+        Assert.assertTrue(BrowserUtils.verifyTitle("apple - Google Search"));
     }
 
     /**
