@@ -31,7 +31,9 @@ public class Bing_StepDefinitions {
      */
     @When("user searches for orange in Bing search box")
     public void user_searches_for_orange_in_bing_search_box() {
-        bingSearchPage.searchBox.sendKeys("orange" + Keys.ENTER);
+        bingSearchPage.searchBox.sendKeys("orange");
+        BrowserUtils.sleep(3); // Adding a delay for demonstration purposes
+        bingSearchPage.searchBox.sendKeys(Keys.ENTER);
     }
 
     /**
