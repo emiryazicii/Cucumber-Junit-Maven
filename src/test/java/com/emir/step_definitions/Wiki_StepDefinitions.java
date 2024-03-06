@@ -79,6 +79,6 @@ public class Wiki_StepDefinitions {
     @Then("user sees {string} is in the image header")
     public void user_sees_is_in_the_image_header(String expectedText) {
         // Verifying if the expected text is present in the image header
-        Assert.assertEquals(wikiResultPage.imageHeader.getText(), expectedText);
+        Assert.assertEquals(expectedText,wikiResultPage.imageHeader.getText());
     }
 }
