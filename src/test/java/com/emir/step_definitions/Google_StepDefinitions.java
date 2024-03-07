@@ -52,7 +52,7 @@ public class Google_StepDefinitions {
         String expectedTitle = "Google";
 
         // Assert the title
-        Assert.assertEquals(actualTitle, expectedTitle);
+        Assert.assertEquals(expectedTitle,actualTitle);
 
         // Close the driver after verification
         Driver.closeDriver();
