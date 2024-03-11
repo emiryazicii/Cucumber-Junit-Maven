@@ -9,5 +9,5 @@ Feature: Google search functionality
     #@wip_emir
   Scenario: Search result title verification
     Given user is on the Google search page
-    When user searches for apple
-    Then user should see apple in the title
+    When user searches for "apple"
+    Then user should see "apple" in the title

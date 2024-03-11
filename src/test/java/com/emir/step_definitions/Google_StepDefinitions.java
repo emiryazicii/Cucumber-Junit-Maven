@@ -18,7 +18,7 @@ public class Google_StepDefinitions {
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
     /**
-     * Step definition for searching for "apple".
+     * Step definition for searching for "word".
      */
     @When("user searches for {word}")
     public void userSearchesForApple(String word) {
@@ -26,7 +26,7 @@ public class Google_StepDefinitions {
     }
 
     /**
-     * Step definition for verifying if the title contains "apple".
+     * Step definition for verifying if the title contains "word".
      */
     @Then("user should see {word} in the title")
     public void userShouldSeeAppleInTheTitle(String word) {
