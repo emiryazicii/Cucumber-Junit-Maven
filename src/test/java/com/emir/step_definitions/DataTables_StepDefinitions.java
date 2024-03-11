@@ -85,7 +85,8 @@ public class DataTables_StepDefinitions {
     }
 
     /**
-     * Step definition for searching for keywords on Google search page.
+     * Step definition for searching for keywords on the Google search page.
+     * Clears the search box and performs a search for each keyword provided.
      *
      * @param searchKeyword The list of keywords to search for.
      */
@@ -93,7 +94,11 @@ public class DataTables_StepDefinitions {
     public void user_should_be_able_to_search_for_following(List<String> searchKeyword) {
         // Loop through each keyword and perform a search
         for (String eachKeyword : searchKeyword) {
+            // Clear the search box before entering a new keyword
+            googleSearchPage.searchBox.clear();
+            // Enter the keyword and press Enter
             googleSearchPage.searchBox.sendKeys(eachKeyword+ Keys.ENTER);
         }
     }
+
 }
