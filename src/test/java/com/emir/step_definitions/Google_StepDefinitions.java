@@ -59,4 +59,21 @@ public class Google_StepDefinitions {
         Driver.closeDriver();
     }
 
+    /**
+     * Step definition for searching for the capital of a specific country.
+     * @param string The country for which the capital is being searched.
+     */
+    @When("user searches for {string} capital")
+    public void user_searches_for_capital(String string) {
+        googleSearchPage.searchBox.sendKeys("capital of "+string + Keys.ENTER);
+    }
+
+    /**
+     * Step definition for verifying if a specific string is present in the search result.
+     * @param string The string expected to be found in the search result.
+     */
+    @Then("user should see {string} in the result")
+    public void user_should_see_in_the_result(String string) {
+        Assert.assertTrue(BrowserUtils.verifyTitleContains(string));
+    }
 }
