@@ -11,7 +11,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         // Add any desired plugins for reporting here
         plugin = {
+                // Generates HTML reports in the specified directory
                 "html:target/cucumber-reports.html",
+                // Generates rerun file in the specified directory
                 "rerun:target/rerun.xtt"
         },
         // Specifies the location of feature files
