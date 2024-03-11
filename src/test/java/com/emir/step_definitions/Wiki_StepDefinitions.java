@@ -3,11 +3,14 @@ package com.emir.step_definitions;
 import com.emir.pages.WikiResultPage;
 import com.emir.pages.WikiSearchPage;
 import com.emir.utilities.BrowserUtils;
+import com.emir.utilities.ConfigurationReader;
 import com.emir.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+
+import java.io.ObjectInputFilter;
 
 /**
  * Step definitions class for Wikipedia search feature.
@@ -26,7 +29,7 @@ public class Wiki_StepDefinitions {
     @Given("user is on Wikipedia home page")
     public void user_is_on_wikipedia_home_page() {
         // Navigate to Wikipedia home page
-        Driver.getDriver().get("https://www.wikipedia.org");
+        Driver.getDriver().get(ConfigurationReader.getProperty("env.wiki"));
     }
 
     /**

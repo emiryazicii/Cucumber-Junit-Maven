@@ -2,6 +2,7 @@ package com.emir.step_definitions;
 
 import com.emir.pages.GoogleSearchPage;
 import com.emir.utilities.BrowserUtils;
+import com.emir.utilities.ConfigurationReader;
 import com.emir.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -38,7 +39,7 @@ public class Google_StepDefinitions {
     @When("user is on the Google search page")
     public void user_is_on_the_google_search_page() {
         // Navigate to Google search page
-        Driver.getDriver().get("https://www.google.com");
+        Driver.getDriver().get(ConfigurationReader.getProperty("env.google"));
     }
 
     /**
@@ -49,7 +50,7 @@ public class Google_StepDefinitions {
         // Get actual title of the page
         String actualTitle = Driver.getDriver().getTitle();
         // Expected title
-        String expectedTitle = "Google";
+        String expectedTitle = ConfigurationReader.getProperty("expected.title.google");
 
         // Assert the title
         Assert.assertEquals(expectedTitle,actualTitle);
