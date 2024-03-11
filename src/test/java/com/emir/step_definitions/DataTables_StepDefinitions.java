@@ -1,12 +1,15 @@
 package com.emir.step_definitions;
 
 import com.emir.pages.DropdownsPage;
+import com.emir.pages.GoogleSearchPage;
 import com.emir.utilities.BrowserUtils;
 import com.emir.utilities.ConfigurationReader;
 import com.emir.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+
 import java.util.List;
 import java.util.Map;
 
@@ -14,6 +17,8 @@ import java.util.Map;
  * Step definitions class for handling Cucumber Data Tables.
  */
 public class DataTables_StepDefinitions {
+
+    GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
     /**
      * Step definition for verifying the list of fruits and vegetables.
@@ -79,4 +84,16 @@ public class DataTables_StepDefinitions {
         Assert.assertEquals(expectedMonths, actualMonths);
     }
 
+    /**
+     * Step definition for searching for keywords on Google search page.
+     *
+     * @param searchKeyword The list of keywords to search for.
+     */
+    @Then("user should be able to search for following:")
+    public void user_should_be_able_to_search_for_following(List<String> searchKeyword) {
+        // Loop through each keyword and perform a search
+        for (String eachKeyword : searchKeyword) {
+            googleSearchPage.searchBox.sendKeys(eachKeyword+ Keys.ENTER);
+        }
+    }
 }
