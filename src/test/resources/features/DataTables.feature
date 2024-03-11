@@ -52,8 +52,9 @@ Feature: Cucumber Data Tables implementation practices
       | November  |
       | December  |
 
-    @dataTable
+  @dataTable
   Scenario: Google search testing data table
+    Given user is on the Google search page
     Then user should be able to search for following:
 
       | Java     |
