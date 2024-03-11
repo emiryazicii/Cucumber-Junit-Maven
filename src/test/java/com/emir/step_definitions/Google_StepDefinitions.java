@@ -74,6 +74,6 @@ public class Google_StepDefinitions {
      */
     @Then("user should see {string} in the result")
     public void user_should_see_in_the_result(String string) {
-        Assert.assertTrue(BrowserUtils.verifyTitleContains(string));
+        Assert.assertEquals(string,googleSearchPage.resultText.getText());
     }
 }
