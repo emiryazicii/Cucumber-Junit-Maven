@@ -16,9 +16,9 @@ import org.junit.runner.RunWith;
         // Specifies the package where step definitions are located
         glue = "com/emir/step_definitions",
         // Whether to execute a dry run of the feature files
-        dryRun = false,
+        dryRun = true,
         // Specifies the tags to include/exclude specific scenarios or features
-        tags = "",
+        tags = "@scenarioOutline",
         // Whether to publish the results
         publish = true
 )
