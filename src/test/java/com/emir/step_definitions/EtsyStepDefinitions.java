@@ -65,5 +65,15 @@ public class EtsyStepDefinitions {
         // Verifies that "Wooden Spoon" is in the title
         Assert.assertTrue(BrowserUtils.verifyTitle(ConfigurationReader.getProperty("expected.title.etsy.search")));
     }
+
+    @When("user types {string} in the search box")
+    public void userTypesInTheSearchBox(String keyword) {
+        etsyHomePage.searchBox.sendKeys(keyword);
+    }
+
+    @Then("user sees {string} is in the title")
+    public void userSeesIsInTheTitle(String expectedTitle) {
+        Assert.assertTrue(BrowserUtils.verifyTitle(expectedTitle));
+    }
 }
 
