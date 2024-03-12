@@ -66,13 +66,27 @@ public class EtsyStepDefinitions {
         Assert.assertTrue(BrowserUtils.verifyTitle(ConfigurationReader.getProperty("expected.title.etsy.search")));
     }
 
+    /**
+     * Performs the action of typing a keyword in the search box on the Etsy homepage.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param keyword The keyword to be typed into the search box
+     */
     @When("user types {string} in the search box")
     public void userTypesInTheSearchBox(String keyword) {
+        // Types the specified keyword into the search box
         etsyHomePage.searchBox.sendKeys(keyword);
     }
 
+    /**
+     * Verifies that a specified title is present in the browser title.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param expectedTitle The expected title to be verified
+     */
     @Then("user sees {string} is in the title")
     public void userSeesIsInTheTitle(String expectedTitle) {
+        // Verifies that the expected title is present in the browser title
         Assert.assertTrue(BrowserUtils.verifyTitle(expectedTitle));
     }
 }
