@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
                 // Generates HTML reports in the specified directory
                 "html:target/cucumber-reports.html",
                 // Generates rerun file in the specified directory
-                "rerun:target/rerun.xtt"
+                "rerun:target/rerun.txt"
         },
         // Specifies the location of feature files
         features = "src/test/resources/features",
@@ -23,7 +23,7 @@ import org.junit.runner.RunWith;
         // Whether to execute a dry run of the feature files
         dryRun = false,
         // Specifies the tags to include/exclude specific scenarios or features
-        tags = "@orderPlacement",
+        tags = "",
         // Whether to publish the results
         publish = true
 )
