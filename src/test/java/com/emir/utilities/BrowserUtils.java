@@ -99,4 +99,20 @@ public class BrowserUtils {
         return actualOptions_as_String;
     }
 
+    /**
+     * Clicks the radio button with the specified attribute value.
+     *
+     * @param radioButtons   The list of radio buttons.
+     * @param attributeValue The attribute value of the radio button to be clicked.
+     */
+    public static void clickRadioButton(List<WebElement> radioButtons, String attributeValue) {
+        // Iterate through each radio button in the list
+        for (WebElement radioButton : radioButtons) {
+            // Check if the current radio button's value matches the specified attribute value
+            if (radioButton.getAttribute("value").equals(attributeValue)) {
+                // If a match is found, click on the radio button
+                radioButton.click();
+            }
+        }
+    }
 }
