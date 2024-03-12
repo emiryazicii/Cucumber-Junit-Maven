@@ -7,3 +7,10 @@ Feature: Some of the general functionality verifications
       | MoneyCog   |
       | Familybea  |
       | Screenable |
+
+    Scenario: Payment options verification
+      Given user is already logged in to the WebTable app
+      When user is on the Orders page
+      Then user sees VISA as enabled payment option
+      Then user sees MasterCard as enabled payment option
+      Then user sees American Express as enabled payment option
