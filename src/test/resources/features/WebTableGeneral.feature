@@ -25,7 +25,7 @@ Feature: Some of the general functionality verifications
     And user enters city "New York City"
     And user enters state "New York"
     And user enters zip "99999"
-    And user selects patment option "American Express"
+    And user selects payment option "American Express"
     And user enters credit card number "1111222233334444"
     And user enters expiration date "12/25"
     And user clicks to process order button
