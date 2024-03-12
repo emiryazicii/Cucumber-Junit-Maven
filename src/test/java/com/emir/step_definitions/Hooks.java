@@ -13,7 +13,7 @@ public class Hooks {
     /**
      * Method to execute before each scenario.
      */
-    @Before
+   //@Before
     public void setupMethod() {
         System.out.println("--->@Before: RUNNING BEFORE EACH SCENARIO");
     }

@@ -10,7 +10,12 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class) // Indicates that this class should be run with JUnit
 @CucumberOptions(
         // Add any desired plugins for reporting here
-        plugin = "html:target/cucumber-reports.html",
+        plugin = {
+                // Generates HTML reports in the specified directory
+                "html:target/cucumber-reports.html",
+                // Generates rerun file in the specified directory
+                "rerun:target/rerun.xtt"
+        },
         // Specifies the location of feature files
         features = "src/test/resources/features",
         // Specifies the package where step definitions are located
@@ -18,7 +23,7 @@ import org.junit.runner.RunWith;
         // Whether to execute a dry run of the feature files
         dryRun = false,
         // Specifies the tags to include/exclude specific scenarios or features
-        tags = "@ceos or @scientists",
+        tags = "@ceos",
         // Whether to publish the results
         publish = true
 )

@@ -20,7 +20,7 @@ Feature: Wiki search features
     When user clicks wiki search button
     Then user sees "Steve Jobs" is in the image header
 
-  @scenarioOutline
+  #@scenarioOutline
   Scenario Outline: Wikipedia Search Functionality with Scenario Outline
     Given user is on Wikipedia home page
     When user types "<searchValue>" in the wiki search box
@@ -33,7 +33,7 @@ Feature: Wiki search features
     Examples: Search values we are going to be using in this scenario outlines
       | searchValue     | expectedTitle   | expectedMainHeader | expectedImageHeader |
       | Steve Jobs      | Steve Jobs      | Steve Jobs         | Steve Jobs          |
-      | Marry Barra     | Marry Barra     | Marry Barra        | Marry Barra         |
+      | Elon Musk       | Elon Musk       | Elon Musk          | Elon Musk           |
       | Rosalind Brewer | Rosalind Brewer | Rosalind Brewer    | Rosalind Brewer     |
       | Sundar Pichai   | Sundar Pichai   | Sundar Pichai      | Sundar Pichai       |
 

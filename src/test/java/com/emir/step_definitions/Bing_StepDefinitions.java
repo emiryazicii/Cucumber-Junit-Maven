@@ -2,6 +2,7 @@ package com.emir.step_definitions;
 
 import com.emir.pages.BingSearchPage;
 import com.emir.utilities.BrowserUtils;
+import com.emir.utilities.ConfigurationReader;
 import com.emir.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -23,7 +24,7 @@ public class Bing_StepDefinitions {
     @Given("user is on the Bing search page")
     public void user_is_on_the_bing_search_page() {
         // Navigate to Bing search page
-        Driver.getDriver().get("https://www.bing.com");
+        Driver.getDriver().get(ConfigurationReader.getProperty("env.bing"));
     }
 
     /**
@@ -31,7 +32,7 @@ public class Bing_StepDefinitions {
      */
     @When("user searches for orange in Bing search box")
     public void user_searches_for_orange_in_bing_search_box() {
-        bingSearchPage.searchBox.sendKeys("orange");
+        bingSearchPage.searchBox.sendKeys(ConfigurationReader.getProperty("search.data.bing"));
         BrowserUtils.sleep(3); // Adding a delay for demonstration purposes
         bingSearchPage.searchBox.sendKeys(Keys.ENTER);
     }
@@ -41,7 +42,7 @@ public class Bing_StepDefinitions {
      */
     @Then("user should see orange in title")
     public void user_should_see_orange_in_title() {
-        Assert.assertTrue(BrowserUtils.verifyTitle("orange - Search"));
+        Assert.assertTrue(BrowserUtils.verifyTitle(ConfigurationReader.getProperty("search.data.bing")+" - Search"));
     }
 
     /**

@@ -22,4 +22,10 @@ public class GoogleSearchPage {
      */
     @FindBy(id = "APjFqb")
     public WebElement searchBox;
+
+    /**
+     * WebElement representing a result link on the Google search page.
+     */
+    @FindBy(xpath = "//div[@class='kp-header']//a")
+    public WebElement resultText;
 }

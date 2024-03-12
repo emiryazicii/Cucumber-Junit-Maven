@@ -1,11 +1,15 @@
 package com.emir.step_definitions;
 
 import com.emir.pages.DropdownsPage;
+import com.emir.pages.GoogleSearchPage;
 import com.emir.utilities.BrowserUtils;
+import com.emir.utilities.ConfigurationReader;
 import com.emir.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
+
 import java.util.List;
 import java.util.Map;
 
@@ -13,6 +17,8 @@ import java.util.Map;
  * Step definitions class for handling Cucumber Data Tables.
  */
 public class DataTables_StepDefinitions {
+
+    GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
     /**
      * Step definition for verifying the list of fruits and vegetables.
@@ -61,7 +67,7 @@ public class DataTables_StepDefinitions {
     @Given("user is on the dropdowns page of practice tool")
     public void user_is_on_the_dropdowns_page_of_practice_tool() {
         // Navigate to the dropdowns page of the practice tool
-        Driver.getDriver().get("https://practice.cydeo.com/dropdown");
+        Driver.getDriver().get(ConfigurationReader.getProperty("env.dropdown"));
     }
 
     /**
@@ -76,6 +82,23 @@ public class DataTables_StepDefinitions {
 
         // Verifying if the actual months match the expected months
         Assert.assertEquals(expectedMonths, actualMonths);
+    }
+
+    /**
+     * Step definition for searching for keywords on the Google search page.
+     * Clears the search box and performs a search for each keyword provided.
+     *
+     * @param searchKeyword The list of keywords to search for.
+     */
+    @Then("user should be able to search for following:")
+    public void user_should_be_able_to_search_for_following(List<String> searchKeyword) {
+        // Loop through each keyword and perform a search
+        for (String eachKeyword : searchKeyword) {
+            // Clear the search box before entering a new keyword
+            googleSearchPage.searchBox.clear();
+            // Enter the keyword and press Enter
+            googleSearchPage.searchBox.sendKeys(eachKeyword+ Keys.ENTER);
+        }
     }
 
 }

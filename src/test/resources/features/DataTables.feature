@@ -35,7 +35,7 @@ Feature: Cucumber Data Tables implementation practices
       | phone   | 1234567898 |
 
 
-  @dataTable
+  #@dataTable
   Scenario: User should be able to see all 12 months in months dropdown
     Given user is on the dropdowns page of practice tool
     Then User should see below info in month dropdown
@@ -52,4 +52,13 @@ Feature: Cucumber Data Tables implementation practices
       | November  |
       | December  |
 
+  @dataTable
+  Scenario: Google search testing data table
+    Given user is on the Google search page
+    Then user should be able to search for following:
 
+      | Java     |
+      | Selenium |
+      | Cucumber |
+      | TestNG   |
+      | Maven    |

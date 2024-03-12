@@ -2,6 +2,7 @@ package com.emir.step_definitions;
 
 import com.emir.pages.GoogleSearchPage;
 import com.emir.utilities.BrowserUtils;
+import com.emir.utilities.ConfigurationReader;
 import com.emir.utilities.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,7 +18,7 @@ public class Google_StepDefinitions {
     GoogleSearchPage googleSearchPage = new GoogleSearchPage();
 
     /**
-     * Step definition for searching for "apple".
+     * Step definition for searching for "word".
      */
     @When("user searches for {word}")
     public void userSearchesForApple(String word) {
@@ -25,7 +26,7 @@ public class Google_StepDefinitions {
     }
 
     /**
-     * Step definition for verifying if the title contains "apple".
+     * Step definition for verifying if the title contains "word".
      */
     @Then("user should see {word} in the title")
     public void userShouldSeeAppleInTheTitle(String word) {
@@ -38,7 +39,7 @@ public class Google_StepDefinitions {
     @When("user is on the Google search page")
     public void user_is_on_the_google_search_page() {
         // Navigate to Google search page
-        Driver.getDriver().get("https://www.google.com");
+        Driver.getDriver().get(ConfigurationReader.getProperty("env.google"));
     }
 
     /**
@@ -49,7 +50,7 @@ public class Google_StepDefinitions {
         // Get actual title of the page
         String actualTitle = Driver.getDriver().getTitle();
         // Expected title
-        String expectedTitle = "Google";
+        String expectedTitle = ConfigurationReader.getProperty("expected.title.google");
 
         // Assert the title
         Assert.assertEquals(expectedTitle,actualTitle);
@@ -58,4 +59,21 @@ public class Google_StepDefinitions {
         Driver.closeDriver();
     }
 
+    /**
+     * Step definition for searching for the capital of a specific country.
+     * @param string The country for which the capital is being searched.
+     */
+    @When("user searches for {string} capital")
+    public void user_searches_for_capital(String string) {
+        googleSearchPage.searchBox.sendKeys("capital of "+string + Keys.ENTER);
+    }
+
+    /**
+     * Step definition for verifying if a specific string is present in the search result.
+     * @param string The string expected to be found in the search result.
+     */
+    @Then("user should see {string} in the result")
+    public void user_should_see_in_the_result(String string) {
+        Assert.assertEquals(string,googleSearchPage.resultText.getText());
+    }
 }
