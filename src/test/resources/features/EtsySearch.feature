@@ -16,4 +16,4 @@ Scenario: Etsy Search Functionality Title Verification (without parameterization
     Given user is on the Etsy homepage
     When user types "Wooden Spoon" in the search box
     And user clicks to Etsy search button
-    Then user sees "Wooden Spoon" is in the title
+    Then user sees "Wooden spoon" is in the title
