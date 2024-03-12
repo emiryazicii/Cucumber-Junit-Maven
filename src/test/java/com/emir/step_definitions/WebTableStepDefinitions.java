@@ -8,6 +8,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.Map;
+
 /**
  * Step definitions for scenarios related to the WebTable application login page.
  */
@@ -88,6 +90,21 @@ public class WebTableStepDefinitions {
     public void user_enters_password(String password) {
         // Enters the provided password into the password input field
         webTableLoginPage.passwordBox.sendKeys(password);
+    }
+
+    /**
+     * Enters the provided username and password into the corresponding input fields.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param credentials A Map containing the username and password to be entered.
+     */
+    @When("user enters below credentials")
+    public void user_enters_below_credentials(Map<String, String> credentials) {
+        // Enters the provided username from the credentials map into the username input field
+        webTableLoginPage.usernameBox.sendKeys(credentials.get("username"));
+
+        // Enters the provided password from the credentials map into the password input field
+        webTableLoginPage.passwordBox.sendKeys(credentials.get("password"));
     }
 
 }
