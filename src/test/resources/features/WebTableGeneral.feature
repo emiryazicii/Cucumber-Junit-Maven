@@ -15,6 +15,7 @@ Feature: Some of the general functionality verifications
     Then user sees MasterCard as enabled payment option
     Then user sees American Express as enabled payment option
 
+    @orderPlacement
   Scenario: Order placement scenario
     Given user is already logged in to the WebTable app
     When user is on the Orders page
