@@ -11,3 +11,9 @@ Scenario: Etsy Search Functionality Title Verification (without parameterization
   When user types Wooden Spoon in the search box
   And user clicks to Etsy search button
   Then user sees Wooden Spoon is in the title
+
+  Scenario: Etsy Search Functionality Title Verification (with parameterization)
+    Given user is on the Etsy homepage
+    When user types "Wooden Spoon" in the search box
+    And user clicks to Etsy search button
+    Then user sees "Wooden Spoon" is in the title
