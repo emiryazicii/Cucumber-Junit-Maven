@@ -7,3 +7,10 @@ Feature: Web table app login functionality
     And user enters correct password
     And user clicks to login button
     Then user should see orders word in the URL
+
+  Scenario: Positive login scenario
+    Given user is on the WebTable app login page
+    When user enters "Test" username
+    And user enters "Tester" password
+    And user clicks to login button
+    Then user should see orders word in the URL
