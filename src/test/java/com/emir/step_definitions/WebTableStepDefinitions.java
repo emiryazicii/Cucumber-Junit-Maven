@@ -2,6 +2,7 @@ package com.emir.step_definitions;
 
 import com.emir.pages.WebTableLoginPage;
 import com.emir.pages.WebTableOrderPage;
+import com.emir.pages.WebTableViewAllOrdersPage;
 import com.emir.utilities.BrowserUtils;
 import com.emir.utilities.ConfigurationReader;
 import com.emir.utilities.Driver;
@@ -9,8 +10,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
-import org.openqa.selenium.support.ui.Select;
-
 import java.util.List;
 import java.util.Map;
 
@@ -19,8 +18,14 @@ import java.util.Map;
  */
 public class WebTableStepDefinitions {
 
+    // Creating an instance of the WebTableOrderPage class
+    WebTableOrderPage webTableOrderPage = new WebTableOrderPage();
+
     // Creating an instance of the WebTableLoginPage class
     WebTableLoginPage webTableLoginPage = new WebTableLoginPage();
+
+    // Creating an instance of the WebTableViewAllOrdersPage class
+    WebTableViewAllOrdersPage webTableViewAllOrdersPage = new WebTableViewAllOrdersPage();
 
     /**
      * Navigates the user to the WebTable application login page.
@@ -111,9 +116,6 @@ public class WebTableStepDefinitions {
         webTableLoginPage.passwordBox.sendKeys(credentials.get("password"));
     }
 
-    // Creating an instance of the WebTableOrderPage class
-    WebTableOrderPage webTableOrderPage = new WebTableOrderPage();
-
     /**
      * Navigates the user to the WebTable application login page
      * and performs login using predefined credentials.
@@ -179,6 +181,147 @@ public class WebTableStepDefinitions {
     public void user_sees_american_express_as_enabled_payment_option() {
         // Asserts that the American Express radio button is enabled
         Assert.assertTrue(webTableOrderPage.americanExpressRadioButton.isEnabled());
+    }
+
+    /**
+     * Enters the specified quantity into the quantity input field.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param quantity The quantity to be entered into the quantity input field.
+     */
+    @When("user enters quantity {string}")
+    public void user_enters_quantity(String quantity) {
+        // Clears the quantity input field and enters the specified quantity
+        webTableOrderPage.inputQuantity.clear();
+        webTableOrderPage.inputQuantity.sendKeys(quantity);
+    }
+
+    /**
+     * Clicks the calculate button.
+     * This step is specified in the Cucumber feature files.
+     */
+    @When("user clicks to the calculate button")
+    public void user_clicks_to_the_calculate_button() {
+        // Clicks the calculate button
+        webTableOrderPage.calculateButton.click();
+    }
+
+    /**
+     * Enters the specified customer name into the customer name input field.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param customerName The customer name to be entered into the customer name input field.
+     */
+    @When("user enters customer name {string}")
+    public void user_enters_customer_name(String customerName) {
+        // Enters the specified customer name
+        webTableOrderPage.customerNameBox.sendKeys(customerName);
+    }
+
+    /**
+     * Enters the specified street into the street input field.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param street The street to be entered into the street input field.
+     */
+    @When("user enters street {string}")
+    public void user_enters_street(String street) {
+        // Enters the specified street
+        webTableOrderPage.streetBox.sendKeys(street);
+    }
+
+    /**
+     * Enters the specified city into the city input field.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param city The city to be entered into the city input field.
+     */
+    @When("user enters city {string}")
+    public void user_enters_city(String city) {
+        // Enters the specified city
+        webTableOrderPage.cityBox.sendKeys(city);
+    }
+
+    /**
+     * Enters the specified state into the state input field.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param state The state to be entered into the state input field.
+     */
+    @When("user enters state {string}")
+    public void user_enters_state(String state) {
+        // Enters the specified state
+        webTableOrderPage.stateBox.sendKeys(state);
+    }
+
+    /**
+     * Enters the specified zip code into the zip code input field.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param zip The zip code to be entered into the zip code input field.
+     */
+    @When("user enters zip {string}")
+    public void user_enters_zip(String zip) {
+        // Enters the specified zip code
+        webTableOrderPage.zipBox.sendKeys(zip);
+    }
+
+    /**
+     * Selects the specified payment option.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param expectedCardType The expected card type to be selected as a payment option.
+     */
+    @When("user selects payment option {string}")
+    public void user_selects_payment_option(String expectedCardType) {
+        // Selects the specified payment option
+        BrowserUtils.clickRadioButton(webTableOrderPage.cardTypes, expectedCardType);
+    }
+
+    /**
+     * Enters the specified credit card number into the credit card number input field.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param cardNumber The credit card number to be entered into the credit card number input field.
+     */
+    @When("user enters credit card number {string}")
+    public void user_enters_credit_card_number(String cardNumber) {
+        // Enters the specified credit card number
+        webTableOrderPage.cardNoBox.sendKeys(cardNumber);
+    }
+
+    /**
+     * Enters the specified expiration date into the expiration date input field.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param expDate The expiration date to be entered into the expiration date input field.
+     */
+    @When("user enters expiration date {string}")
+    public void user_enters_expiration_date(String expDate) {
+        // Enters the specified expiration date
+        webTableOrderPage.expiryDateBox.sendKeys(expDate);
+    }
+
+    /**
+     * Clicks the process order button.
+     * This step is specified in the Cucumber feature files.
+     */
+    @When("user clicks to process order button")
+    public void user_clicks_to_process_order_button() {
+        // Clicks the process order button
+        webTableOrderPage.processOrderButton.click();
+    }
+
+    /**
+     * Verifies that the specified name is displayed in the first row of the web table.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param expectedName The expected name to be displayed in the first row of the web table.
+     */
+    @Then("user should see {string} in the first row of the web table")
+    public void user_should_see_in_the_first_row_of_the_web_table(String expectedName) {
+        // Verifies that the expected name is displayed in the first row of the web table
+        Assert.assertEquals(expectedName, webTableViewAllOrdersPage.newCustomerCell.getText());
     }
 }
 
