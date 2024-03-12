@@ -42,4 +42,64 @@ public class WebTableOrderPage extends WebTableBasePage {
      */
     @FindBy(xpath = "//input[@value='American Express']")
     public WebElement americanExpressRadioButton;
+
+    /**
+     * WebElement representing the input field for quantity.
+     */
+    @FindBy(name = "quantity")
+    public WebElement inputQuantity;
+
+    /**
+     * WebElement representing the button to calculate the order.
+     */
+    @FindBy(xpath = "//button[.='Calculate']")
+    public WebElement calculateButton;
+
+    /**
+     * WebElement representing the input field for customer name.
+     */
+    @FindBy(name = "name")
+    public WebElement customerNameBox;
+
+    /**
+     * WebElement representing the input field for street address.
+     */
+    @FindBy(name = "street")
+    public WebElement streetBox;
+
+    /**
+     * WebElement representing the input field for city.
+     */
+    @FindBy(name = "city")
+    public WebElement cityBox;
+
+    /**
+     * WebElement representing the input field for state.
+     */
+    @FindBy(name = "state")
+    public WebElement stateBox;
+
+    /**
+     * WebElement representing the input field for zip code.
+     */
+    @FindBy(name = "zip")
+    public WebElement zipBox;
+
+    /**
+     * WebElement representing the input field for card number.
+     */
+    @FindBy(name = "cardNo")
+    public WebElement cardNoBox;
+
+    /**
+     * WebElement representing the input field for card expiry date.
+     */
+    @FindBy(name = "cardExp")
+    public WebElement expiryDateBox;
+
+    /**
+     * WebElement representing the button to process the order.
+     */
+    @FindBy(xpath = "//button[.='Process Order']")
+    public WebElement processOrderButton;
 }
