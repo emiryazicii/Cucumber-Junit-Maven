@@ -24,4 +24,22 @@ public class WebTableOrderPage extends WebTableBasePage {
      */
     @FindBy(name = "product")
     public WebElement productDropdown;
+
+    /**
+     * WebElement representing the Visa radio button on the order page.
+     */
+    @FindBy(xpath = "//input[@value='Visa']")
+    public WebElement visaRadioButton;
+
+    /**
+     * WebElement representing the MasterCard radio button on the order page.
+     */
+    @FindBy(xpath = "//input[@value='MasterCard']")
+    public WebElement masterCardRadioButton;
+
+    /**
+     * WebElement representing the American Express radio button on the order page.
+     */
+    @FindBy(xpath = "//input[@value='American Express']")
+    public WebElement americanExpressRadioButton;
 }
