@@ -150,4 +150,35 @@ public class WebTableStepDefinitions {
         // Asserts that the actual options match the expected options
         Assert.assertEquals(expectedOptions, actualOptions);
     }
+
+    /**
+     * Verifies that the VISA radio button is enabled.
+     * This step is specified in the Cucumber feature files.
+     */
+    @Then("user sees VISA as enabled payment option")
+    public void user_sees_visa_as_enabled_payment_option() {
+        // Asserts that the VISA radio button is enabled
+        Assert.assertTrue(webTableOrderPage.visaRadioButton.isEnabled());
+    }
+
+    /**
+     * Verifies that the MasterCard radio button is enabled.
+     * This step is specified in the Cucumber feature files.
+     */
+    @Then("user sees MasterCard as enabled payment option")
+    public void user_sees_master_card_as_enabled_payment_option() {
+        // Asserts that the MasterCard radio button is enabled
+        Assert.assertTrue(webTableOrderPage.masterCardRadioButton.isEnabled());
+    }
+
+    /**
+     * Verifies that the American Express radio button is enabled.
+     * This step is specified in the Cucumber feature files.
+     */
+    @Then("user sees American Express as enabled payment option")
+    public void user_sees_american_express_as_enabled_payment_option() {
+        // Asserts that the American Express radio button is enabled
+        Assert.assertTrue(webTableOrderPage.americanExpressRadioButton.isEnabled());
+    }
 }
+
