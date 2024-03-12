@@ -2,6 +2,7 @@ package com.emir.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -14,7 +15,8 @@ import java.time.Duration;
 public class Driver {
 
     // Private constructor to prevent instantiation from outside
-    private Driver() {}
+    private Driver() {
+    }
 
     // Thread-local variable to hold WebDriver instances
     private static InheritableThreadLocal<WebDriver> driverPool = new InheritableThreadLocal<>();
@@ -40,6 +42,11 @@ public class Driver {
                     break;
                 case "edge":
                     driverPool.set(new EdgeDriver());
+                    break;
+                case "headless-chrome":
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--headless=new");
+                    driverPool.set(new ChromeDriver(options));
                     break;
                 default:
                     throw new IllegalArgumentException("Invalid browser type specified in the configuration: " + browserType);
