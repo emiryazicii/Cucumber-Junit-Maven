@@ -5,5 +5,5 @@ Feature: Some of the general functionality verifications
     When user is on the Orders page
     Then user sees below options under product dropdown
       | MoneyCog   |
-      | FamilyBea  |
+      | Familybea  |
       | Screenable |
