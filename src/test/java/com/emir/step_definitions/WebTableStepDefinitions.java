@@ -65,4 +65,29 @@ public class WebTableStepDefinitions {
         // Asserts that the current URL contains the word "orders"
         Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("orders"));
     }
+
+    /**
+     * Enters the specified username into the username input field.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param username The username to be entered into the username input field.
+     */
+    @When("user enters {string} username")
+    public void user_enters_username(String username) {
+        // Enters the provided username into the username input field
+        webTableLoginPage.usernameBox.sendKeys(username);
+    }
+
+    /**
+     * Enters the specified password into the password input field.
+     * This step is specified in the Cucumber feature files.
+     *
+     * @param password The password to be entered into the password input field.
+     */
+    @When("user enters {string} password")
+    public void user_enters_password(String password) {
+        // Enters the provided password into the password input field
+        webTableLoginPage.passwordBox.sendKeys(password);
+    }
+
 }
