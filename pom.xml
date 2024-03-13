@@ -37,7 +37,7 @@
                 <configuration>
                     <!-- Configure test execution -->
                     <parallel>methods</parallel>
-                    <threadCount>4</threadCount>
+                    <threadCount>8</threadCount>
                     <perCoreThreadCount>false</perCoreThreadCount>
                     <!-- Ignore test failures but continue with the build -->
                     <testFailureIgnore>true</testFailureIgnore>
