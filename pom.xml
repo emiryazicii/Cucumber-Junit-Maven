@@ -115,5 +115,13 @@
             <artifactId>allure-cucumber7-jvm</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- Apache POI dependency for handling Excel files -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>5.2.5</version>
+        </dependency>
+
     </dependencies>
 </project>
