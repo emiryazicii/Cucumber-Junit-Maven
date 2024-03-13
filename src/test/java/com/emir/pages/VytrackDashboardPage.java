@@ -8,12 +8,12 @@ import org.openqa.selenium.support.PageFactory;
 /**
  * This class represents the Dashboard page of VyTrack application.
  */
-public class VyTrackDashboardPage {
+public class VytrackDashboardPage {
 
     /**
      * Constructor to initialize the VyTrackDashboardPage object.
      */
-    public VyTrackDashboardPage() {
+    public VytrackDashboardPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
