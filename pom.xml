@@ -15,13 +15,13 @@
 
     <!-- Project properties -->
     <properties>
-        <!-- Java compiler source version -->
+        <!-- Define Java compiler source and target versions -->
         <maven.compiler.source>11</maven.compiler.source>
-        <!-- Java compiler target version -->
         <maven.compiler.target>11</maven.compiler.target>
-        <!-- Source file encoding -->
+        <!-- Define source file encoding -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <!-- Define Allure version -->
         <allure.version>2.25.0</allure.version>
     </properties>
 
@@ -35,7 +35,7 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
                 <configuration>
-                    <!-- Configuring test execution -->
+                    <!-- Configure test execution -->
                     <parallel>methods</parallel>
                     <threadCount>4</threadCount>
                     <perCoreThreadCount>false</perCoreThreadCount>
@@ -50,7 +50,7 @@
         </plugins>
     </build>
 
-    <!-- Add allure-bom to dependency management to ensure correct versions of all the dependencies are used -->
+    <!-- Define dependency management for Allure -->
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -63,10 +63,8 @@
         </dependencies>
     </dependencyManagement>
 
-
     <!-- Project dependencies -->
     <dependencies>
-
         <!-- Selenium Java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -111,11 +109,11 @@
             <scope>test</scope> <!-- This dependency is only needed for testing -->
         </dependency>
 
+        <!-- Allure Cucumber7 JVM -->
         <dependency>
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-cucumber7-jvm</artifactId>
             <scope>test</scope>
         </dependency>
-        
     </dependencies>
 </project>
