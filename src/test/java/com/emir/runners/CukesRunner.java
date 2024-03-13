@@ -14,7 +14,8 @@ import org.junit.runner.RunWith;
                 // Generates HTML reports in the specified directory
                 "html:target/cucumber-reports.html",
                 // Generates rerun file in the specified directory
-                "rerun:target/rerun.txt"
+                "rerun:target/rerun.txt",
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         },
         // Specifies the location of feature files
         features = "src/test/resources/features",
