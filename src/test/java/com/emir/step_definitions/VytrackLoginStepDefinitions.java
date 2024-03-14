@@ -52,7 +52,7 @@ public class VytrackLoginStepDefinitions {
      */
     @When("the user login with given credentials from {string} and {int}")
     public void the_user_login_with_given_credentials_from_and(String sheetName, Integer rowNumber) {
-        ExcelUtil excelUtil = new ExcelUtil("VyTrackQa2Users.xlsx", "VytrackUsers");
+        ExcelUtil excelUtil = new ExcelUtil("VyTrackQa2Users.xlsx", sheetName);
         userName = excelUtil.getCellData(rowNumber, 0);
         password = excelUtil.getCellData(rowNumber, 1);
         firstName = excelUtil.getCellData(rowNumber, 2);
