@@ -1,0 +1,69 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Sat Mar 16 23:23:09 GMT 2024","Sat Mar 16 23:23:25 GMT 2024","15885","","Cucumber Data Tables implementation practices","","Google search testing data table","","Google search testing data table","  Description: This feature describes practices for implementing Cucumber Data Tables."
+"passed","Sat Mar 16 23:23:02 GMT 2024","Sat Mar 16 23:23:06 GMT 2024","4193","","Web table app login functionality","","Positive login scenario","","Positive login scenario","  Agile story: User should be able to login with correct credentials"
+"passed","Sat Mar 16 23:23:22 GMT 2024","Sat Mar 16 23:23:26 GMT 2024","3900","","Some of the general functionality verifications","","Order placement scenario","","Order placement scenario",""
+"passed","Sat Mar 16 23:23:29 GMT 2024","Sat Mar 16 23:23:31 GMT 2024","2246","","Some of the general functionality verifications","","Order placement scenario","","Order placement scenario",""
+"passed","Sat Mar 16 23:23:22 GMT 2024","Sat Mar 16 23:23:27 GMT 2024","4234","","Google search functionality with Scenario Outline","","Google search testing with Scenario Outline","","Google search testing with Scenario Outline","  User Story: As a user, when I'm on the google page
+  I should be able to search whatever I want and see relevant information."
+"passed","Sat Mar 16 23:23:25 GMT 2024","Sat Mar 16 23:23:28 GMT 2024","3831","","Users should be able to login","","Login with","","Login with","  User Story:
+  As a user, I should be able to login with correct credentials to different accounts. And dashboard should be displayed.
+  Accounts are: driver, sales manager, store manager"
+"passed","Sat Mar 16 23:23:00 GMT 2024","Sat Mar 16 23:23:03 GMT 2024","2812","","Cucumber Data Tables implementation practices","","List of the animals we love","","List of the animals we love","  Description: This feature describes practices for implementing Cucumber Data Tables."
+"passed","Sat Mar 16 23:23:27 GMT 2024","Sat Mar 16 23:23:29 GMT 2024","2236","","Wiki search features","","Wikipedia Search Functionality with Scenario Outline","","Wikipedia Search Functionality with Scenario Outline","  Description: This feature describes the functionality related to searching on Wikipedia."
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:23:00 GMT 2024","2629","","Cucumber Data Tables implementation practices","","List of fruits and vegetables I like","","List of fruits and vegetables I like","  Description: This feature describes practices for implementing Cucumber Data Tables."
+"passed","Sat Mar 16 23:23:28 GMT 2024","Sat Mar 16 23:23:31 GMT 2024","2960","","Users should be able to login","","Login with","","Login with","  User Story:
+  As a user, I should be able to login with correct credentials to different accounts. And dashboard should be displayed.
+  Accounts are: driver, sales manager, store manager"
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:22:58 GMT 2024","18","","Library login feature","","Login as librarian","","Login as librarian","  User Story:
+  As a user, I should be able to login with correct credentials to different accounts. And dashboard should be displayed.
+  Accounts are: librarian, student, admin"
+"passed","Sat Mar 16 23:23:02 GMT 2024","Sat Mar 16 23:23:06 GMT 2024","4019","","Some of the general functionality verifications","","Payment options verification","","Payment options verification",""
+"passed","Sat Mar 16 23:23:10 GMT 2024","Sat Mar 16 23:23:19 GMT 2024","9184","","Bing search functionality","","Search result title verification","","Search result title verification","  Agile story: As a user , when I'm on the Bing search page
+  I should be able to search anything and see relevant results."
+"passed","Sat Mar 16 23:23:08 GMT 2024","Sat Mar 16 23:23:17 GMT 2024","8544","","Google search functionality with Scenario Outline","","Google search testing with Scenario Outline","","Google search testing with Scenario Outline","  User Story: As a user, when I'm on the google page
+  I should be able to search whatever I want and see relevant information."
+"passed","Sat Mar 16 23:23:16 GMT 2024","Sat Mar 16 23:23:20 GMT 2024","4665","","Wiki search features","","Wikipedia Search Functionality with Scenario Outline","","Wikipedia Search Functionality with Scenario Outline","  Description: This feature describes the functionality related to searching on Wikipedia."
+"passed","Sat Mar 16 23:23:03 GMT 2024","Sat Mar 16 23:23:05 GMT 2024","2278","","Cucumber Data Tables implementation practices","","Officer reads data about driver","","Officer reads data about driver","  Description: This feature describes practices for implementing Cucumber Data Tables."
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:23:03 GMT 2024","5184","","Google search functionality","","Search page default title verification","","Search page default title verification","  Agile story: As a user, when I'm on the Google search page
+  I should be able to search anything and see relevant results"
+"passed","Sat Mar 16 23:23:12 GMT 2024","Sat Mar 16 23:23:18 GMT 2024","5244","","Some of the general functionality verifications","","Order placement scenario","","Order placement scenario",""
+"passed","Sat Mar 16 23:23:05 GMT 2024","Sat Mar 16 23:23:09 GMT 2024","3630","","Cucumber Data Tables implementation practices","","User should be able to see all 12 months in months dropdown","","User should be able to see all 12 months in months dropdown","  Description: This feature describes practices for implementing Cucumber Data Tables."
+"passed","Sat Mar 16 23:23:14 GMT 2024","Sat Mar 16 23:23:20 GMT 2024","5840","","Users should be able to login","","Login with","","Login with","  User Story:
+  As a user, I should be able to login with correct credentials to different accounts. And dashboard should be displayed.
+  Accounts are: driver, sales manager, store manager"
+"passed","Sat Mar 16 23:23:06 GMT 2024","Sat Mar 16 23:23:12 GMT 2024","6215","","Some of the general functionality verifications","","Order placement scenario","","Order placement scenario",""
+"passed","Sat Mar 16 23:23:20 GMT 2024","Sat Mar 16 23:23:25 GMT 2024","4438","","Users should be able to login","","Login with","","Login with","  User Story:
+  As a user, I should be able to login with correct credentials to different accounts. And dashboard should be displayed.
+  Accounts are: driver, sales manager, store manager"
+"passed","Sat Mar 16 23:23:20 GMT 2024","Sat Mar 16 23:23:25 GMT 2024","4630","","Wiki search features","","Wikipedia Search Functionality with Scenario Outline","","Wikipedia Search Functionality with Scenario Outline","  Description: This feature describes the functionality related to searching on Wikipedia."
+"passed","Sat Mar 16 23:23:25 GMT 2024","Sat Mar 16 23:23:27 GMT 2024","2077","","Wiki search features","","Wikipedia Search Functionality with Scenario Outline","","Wikipedia Search Functionality with Scenario Outline","  Description: This feature describes the functionality related to searching on Wikipedia."
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:22:58 GMT 2024","19","","Library login feature","","Login as student","","Login as student","  User Story:
+  As a user, I should be able to login with correct credentials to different accounts. And dashboard should be displayed.
+  Accounts are: librarian, student, admin"
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:23:02 GMT 2024","4527","","Some of the general functionality verifications","","Dropdown options verification","","Dropdown options verification",""
+"passed","Sat Mar 16 23:23:18 GMT 2024","Sat Mar 16 23:23:22 GMT 2024","4701","","Some of the general functionality verifications","","Order placement scenario","","Order placement scenario",""
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:23:04 GMT 2024","6055","","Wiki search features","","Wikipedia Search Functionality Title Verification","","Wikipedia Search Functionality Title Verification","  Description: This feature describes the functionality related to searching on Wikipedia."
+"passed","Sat Mar 16 23:23:11 GMT 2024","Sat Mar 16 23:23:16 GMT 2024","5070","","Wiki search features","","Wikipedia Search Functionality Image Header Verification","","Wikipedia Search Functionality Image Header Verification","  Description: This feature describes the functionality related to searching on Wikipedia."
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:23:08 GMT 2024","10614","","Google search functionality with Scenario Outline","","Google search testing with Scenario Outline","","Google search testing with Scenario Outline","  User Story: As a user, when I'm on the google page
+  I should be able to search whatever I want and see relevant information."
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:22:58 GMT 2024","7","","Library login feature","","Login as admin","","Login as admin","  User Story:
+  As a user, I should be able to login with correct credentials to different accounts. And dashboard should be displayed.
+  Accounts are: librarian, student, admin"
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:23:08 GMT 2024","10848","","Users should be able to login","","Login with","","Login with","  User Story:
+  As a user, I should be able to login with correct credentials to different accounts. And dashboard should be displayed.
+  Accounts are: driver, sales manager, store manager"
+"passed","Sat Mar 16 23:23:26 GMT 2024","Sat Mar 16 23:23:29 GMT 2024","2436","","Some of the general functionality verifications","","Order placement scenario","","Order placement scenario",""
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:23:10 GMT 2024","12707","","Bing search functionality","","Search result title verification","","Search result title verification","  Agile story: As a user , when I'm on the Bing search page
+  I should be able to search anything and see relevant results."
+"passed","Sat Mar 16 23:23:31 GMT 2024","Sat Mar 16 23:23:33 GMT 2024","1594","","Wiki search features","","Wikipedia Search Functionality with Scenario Outline","","Wikipedia Search Functionality with Scenario Outline","  Description: This feature describes the functionality related to searching on Wikipedia."
+"passed","Sat Mar 16 23:23:04 GMT 2024","Sat Mar 16 23:23:11 GMT 2024","6549","","Wiki search features","","Wikipedia Search Functionality Header Verification","","Wikipedia Search Functionality Header Verification","  Description: This feature describes the functionality related to searching on Wikipedia."
+"passed","Sat Mar 16 23:23:17 GMT 2024","Sat Mar 16 23:23:22 GMT 2024","5525","","Google search functionality with Scenario Outline","","Google search testing with Scenario Outline","","Google search testing with Scenario Outline","  User Story: As a user, when I'm on the google page
+  I should be able to search whatever I want and see relevant information."
+"passed","Sat Mar 16 23:23:06 GMT 2024","Sat Mar 16 23:23:10 GMT 2024","3952","","Web table app login functionality","","Positive login scenario","","Positive login scenario","  Agile story: User should be able to login with correct credentials"
+"passed","Sat Mar 16 23:23:29 GMT 2024","Sat Mar 16 23:23:31 GMT 2024","2024","","Wiki search features","","Wikipedia Search Functionality with Scenario Outline","","Wikipedia Search Functionality with Scenario Outline","  Description: This feature describes the functionality related to searching on Wikipedia."
+"passed","Sat Mar 16 23:22:58 GMT 2024","Sat Mar 16 23:23:01 GMT 2024","3938","","Web table app login functionality","","Positive login scenario","","Positive login scenario","  Agile story: User should be able to login with correct credentials"
+"passed","Sat Mar 16 23:23:03 GMT 2024","Sat Mar 16 23:23:11 GMT 2024","7888","","Google search functionality","","Search result title verification","","Search result title verification","  Agile story: As a user, when I'm on the Google search page
+  I should be able to search anything and see relevant results"
+"passed","Sat Mar 16 23:23:08 GMT 2024","Sat Mar 16 23:23:14 GMT 2024","5796","","Users should be able to login","","Login with","","Login with","  User Story:
+  As a user, I should be able to login with correct credentials to different accounts. And dashboard should be displayed.
+  Accounts are: driver, sales manager, store manager"
