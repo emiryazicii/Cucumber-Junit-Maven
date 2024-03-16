@@ -25,7 +25,7 @@ import org.junit.runner.RunWith;
         // Whether to execute a dry run of the feature files
         dryRun = false,
         // Specifies the tags to include/exclude specific scenarios or features
-        tags = "@wip",
+        tags = "not @etsy",
         // Whether to publish the results
         publish = true
 )
